@@ -1,0 +1,22 @@
+services:
+  consumer:
+    build: ./consumer
+    image: consumer:latest
+    container_name: consumer
+    environment:
+      - TZ=America/Sao_Paulo
+    env_file:
+      - .env
+    volumes:
+      - ${PWD}/consumer:/app
+
+  producer:
+    build: ./producer
+    image: producer:latest
+    container_name: producer
+    environment:
+      - TZ=America/Sao_Paulo
+    env_file:
+      - .env
+    volumes:
+      - ${PWD}/producer:/app
