@@ -7,6 +7,12 @@ up\:producer:
 up\:consumer:
 	@docker compose -f docker-compose.services.yml up consumer
 
+build\:producer:
+	@docker compose -f docker-compose.services.yml build producer
+
+build\:consumer:
+	@docker compose -f docker-compose.services.yml build consumer
+
 sh\:producer:
 	docker compose exec producer bash
 

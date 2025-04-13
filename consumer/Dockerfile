@@ -16,4 +16,4 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-CMD ["tail", "-f", "/dev/null"]
+CMD ["python3", "consumer.py"]
